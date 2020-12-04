@@ -6,10 +6,10 @@ var randPass = "";
 
 function password() {
 
-    var passLegnth = parseInt(prompt("How long would you like your password to be? (8-20)"));
+    var passLegnth = parseInt(prompt("How long would you like your password to be? (8-128)"));
     var userChoice = "";
 
-    if (passLegnth > 7 && passLegnth < 21) {
+    if (passLegnth > 7 && passLegnth < 129) {
         alert("You want " + passLegnth + " characters");
     } else if(Number.isNaN(passLegnth)) {
         alert("Thats not an option.");
@@ -64,7 +64,10 @@ function password() {
 
     
 }
-
-
+function copyClip() {
+var copyText = document.getElementById("newPass");
+copyText.select();
+document.execCommand("copy");
+}
     
 
