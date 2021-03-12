@@ -68,6 +68,7 @@ function copyClip() {
 var copyText = document.getElementById("newPass");
 copyText.select();
 document.execCommand("copy");
+alert("Password Copied to Clipboard!")
 }
     
 
